@@ -1,10 +1,9 @@
-import styles from "./layout.module.css";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 
 export default function Layout({ children }) {
   return (
-    <div className={styles.container}>
+    <div className="min-h-screen pt-12	flex flex-col items-center">
       <Header />
       <main>{children}</main>
       <Footer />
