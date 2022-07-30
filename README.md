@@ -5,7 +5,7 @@ Know your hourly rate!
 ## Next up
 
 - [ ] Add Button
-- [ ] Build out basic form for hourly calculations
+- [x] Build out basic form for hourly calculations
 - [x] (mobile first) Left sidebar + Main + Right sidebar + Footer shell
 - [x] Left sidebar + Main + Right sidebar + Footer shell
 - [x] Make hot reload work ... again
