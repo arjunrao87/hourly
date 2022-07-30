@@ -15,7 +15,7 @@ export default function Layout({ children }) {
               🤑 Hourly
             </h1>
             <div className="flex h-full mx-auto overflow-y-auto px-6">
-              <form action="/send-data-here" method="post">
+              <form>
                 <div className="py-0">
                   <div className="mt-8 max-w-md">
                     <div className="grid grid-cols-1 gap-6">
@@ -28,6 +28,7 @@ export default function Layout({ children }) {
                         </span>
                         <span className="flex flex-row gap-x-2">
                           <select
+                            name="salary_currency"
                             className="
                                         block
                                         w-min
@@ -45,20 +46,24 @@ export default function Layout({ children }) {
                             <option>INR (₹)</option>
                             <option>Other</option>
                           </select>
-                          <input
-                            type="number"
-                            className="
-                                          mt-1
+                          <div className="flex flex-col">
+                            <input
+                              type="number"
+                              required
+                              name="salary_amount"
+                              min="0"
+                              className="mt-1
                                           block
                                           w-full
                                           rounded-md
                                           border-gray-300
                                           shadow-sm
-                                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                                      "
-                            placeholder="Enter amount..."
-                          />
+                                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                              placeholder="Enter amount..."
+                            />
+                          </div>
                           <select
+                            name="salary_duration"
                             className="
                                         block
                                         w-min
@@ -87,26 +92,27 @@ export default function Layout({ children }) {
                             id="default-radio-1"
                             type="radio"
                             value=""
-                            name="default-radio"
+                            name="radio_enjoyment"
                             className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                           />
                           <label
-                            for="default-radio-1"
-                            class="mt-1 ml-2 text-sm font-medium text-gray-700  dark:text-slate-100"
+                            htmlFor="default-radio-1"
+                            className="mt-1 ml-2 text-sm font-medium text-gray-700  dark:text-slate-100"
                           >
                             {" "}
                             Yes
                           </label>
                           <input
+                            defaultChecked
                             id="default-radio-2"
                             type="radio"
                             value=""
-                            name="default-radio"
+                            name="radio_enjoyment"
                             className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                           />
                           <label
-                            for="default-radio-2"
-                            class="mt-1 ml-2 text-sm font-medium text-gray-700  dark:text-slate-100"
+                            htmlFor="default-radio-2"
+                            className="mt-1 ml-2 text-sm font-medium text-gray-700  dark:text-slate-100"
                           >
                             {" "}
                             No
@@ -115,12 +121,12 @@ export default function Layout({ children }) {
                             id="default-radio-3"
                             type="radio"
                             value=""
-                            name="default-radio"
+                            name="radio_enjoyment"
                             className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                           />
                           <label
-                            for="default-radio-3"
-                            class="mt-1 ml-2 text-sm font-medium text-gray-700  dark:text-slate-100"
+                            htmlFor="default-radio-3"
+                            className="mt-1 ml-2 text-sm font-medium text-gray-700  dark:text-slate-100"
                           >
                             {" "}
                             Sometimes
@@ -132,10 +138,13 @@ export default function Layout({ children }) {
                       </h3>
                       <label className="block">
                         <span className="text-gray-700 dark:text-slate-100">
-                          How long would the task take to complete?
+                          How long would the task take to complete? (in hours)
                         </span>
                         <input
                           type="number"
+                          required
+                          min="0"
+                          name="task_duration"
                           className="
                                       mt-1
                                       block
@@ -145,7 +154,7 @@ export default function Layout({ children }) {
                                       shadow-sm
                                       focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                                     "
-                          placeholder="Enter time in increments of 0.5 hr..."
+                          placeholder="Enter time..."
                         />
                       </label>
                       <label className="block">
@@ -154,6 +163,7 @@ export default function Layout({ children }) {
                         </span>
                         <span className="flex flex-row gap-x-2">
                           <select
+                            name="task_currency"
                             className="
                                         block
                                         w-min
@@ -173,6 +183,9 @@ export default function Layout({ children }) {
                           </select>
                           <input
                             type="number"
+                            name="task_amount"
+                            required
+                            min="0"
                             className="
                                           mt-1
                                           block
@@ -185,6 +198,7 @@ export default function Layout({ children }) {
                             placeholder="Enter amount..."
                           />
                           <select
+                            name="task_payment_duration"
                             className="
                                         block
                                         w-min

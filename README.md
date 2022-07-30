@@ -4,7 +4,8 @@ Know your hourly rate!
 
 ## Next up
 
-- [ ] Connect "Submit" to 'backend' aka do something with form inputs
+- [ ] Connect Form submission (incl the 404 console errors)
+- [x] Client side form validation
 - [x] Split up the input box into sub-components
 - [x] Add Button
 - [x] Build out basic form for hourly calculations
