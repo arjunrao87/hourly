@@ -15,19 +15,20 @@ export default function Layout({ children }) {
               🤑 Hourly
             </h1>
             <div className="flex h-full mx-auto overflow-y-auto">
-              <div className="py-0">
-                <div className="mt-8 max-w-md">
-                  <div className="grid grid-cols-1 gap-6">
-                    <div className="text-lg md:text-xl font-bold">
-                      About You
-                    </div>
-                    <label className="block">
-                      <span className="text-gray-700  dark:text-slate-100">
-                        How much do you make?
-                      </span>
-                      <input
-                        type="number"
-                        className="
+              <form action="/send-data-here" method="post">
+                <div className="py-0">
+                  <div className="mt-8 max-w-md">
+                    <div className="grid grid-cols-1 gap-6">
+                      <div className="text-lg md:text-xl font-bold  dark:text-slate-100">
+                        About You
+                      </div>
+                      <label className="block">
+                        <span className="text-gray-700  dark:text-slate-100">
+                          How much do you make?
+                        </span>
+                        <input
+                          type="number"
+                          className="
                     mt-1
                     block
                     w-full
@@ -36,15 +37,15 @@ export default function Layout({ children }) {
                     shadow-sm
                     focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
-                        placeholder=""
-                      />
-                    </label>
-                    <label className="block">
-                      <span className="text-gray-700  dark:text-slate-100">
-                        Do you like doing this type of task?
-                      </span>
-                      <select
-                        className="
+                          placeholder=""
+                        />
+                      </label>
+                      <label className="block">
+                        <span className="text-gray-700  dark:text-slate-100">
+                          Do you like doing this type of task?
+                        </span>
+                        <select
+                          className="
                     block
                     w-full
                     mt-1
@@ -53,22 +54,22 @@ export default function Layout({ children }) {
                     shadow-sm
                     focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
-                      >
-                        <option>No</option>
-                        <option>Yes</option>
-                        <option>Sometimes</option>
-                      </select>
-                    </label>
-                    <h3 className="text-lg md:text-xl font-bold">
-                      Outsourcing your task
-                    </h3>
-                    <label className="block">
-                      <span className="text-gray-700 dark:text-slate-100">
-                        How long would the task take to complete?
-                      </span>
-                      <input
-                        type="number"
-                        className="
+                        >
+                          <option>No</option>
+                          <option>Yes</option>
+                          <option>Sometimes</option>
+                        </select>
+                      </label>
+                      <h3 className="text-lg md:text-xl font-bold  dark:text-slate-100">
+                        Outsourcing your task
+                      </h3>
+                      <label className="block">
+                        <span className="text-gray-700 dark:text-slate-100">
+                          How long would the task take to complete?
+                        </span>
+                        <input
+                          type="number"
+                          className="
                     mt-1
                     block
                     w-full
@@ -77,16 +78,16 @@ export default function Layout({ children }) {
                     shadow-sm
                     focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
-                        placeholder="Values in increments of 0.5hr"
-                      />
-                    </label>
-                    <label className="block">
-                      <span className="text-gray-700 dark:text-slate-100">
-                        How much would you pay for the task to be done?
-                      </span>
-                      <input
-                        type="number"
-                        className="
+                          placeholder="Values in increments of 0.5hr"
+                        />
+                      </label>
+                      <label className="block">
+                        <span className="text-gray-700 dark:text-slate-100">
+                          How much would you pay for the task to be done?
+                        </span>
+                        <input
+                          type="number"
+                          className="
                     mt-1
                     block
                     w-full
@@ -95,16 +96,16 @@ export default function Layout({ children }) {
                     shadow-sm
                     focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
-                        placeholder=""
-                      />
-                    </label>
-                    <div className="block">
-                      <div className="mt-2">
-                        <div>
-                          <label className="inline-flex items-center">
-                            <input
-                              type="checkbox"
-                              className="
+                          placeholder=""
+                        />
+                      </label>
+                      <div className="block">
+                        <div className="mt-2">
+                          <div>
+                            <label className="inline-flex items-center">
+                              <input
+                                type="checkbox"
+                                className="
                           rounded
                           border-gray-300
                           text-indigo-600
@@ -115,18 +116,27 @@ export default function Layout({ children }) {
                           focus:ring-indigo-200
                           focus:ring-opacity-50
                         "
-                              defaultChecked
-                            />
-                            <span className="ml-2  dark:text-slate-100">
-                              Email me
-                            </span>
-                          </label>
+                                defaultChecked
+                              />
+                              <span className="ml-2  dark:text-slate-100">
+                                Email me
+                              </span>
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                <div className="py-2 items-center">
+                  <button
+                    type="submit"
+                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
           <div className="h-full hidden md:block md:w-60 items-center justify-center bg-gray-100">
