@@ -40,7 +40,7 @@ export default function Layout({ children }) {
             <h3> Left sidebar</h3>
           </div>
           <div className="mx-auto flex flex-col h-full w-full bg-gray-200 dark:bg-slate-700">
-            <h1 className="py-4 text-left px-2 md:py-8 md:text-center md:items-center md:text-5xl font-bold dark:text-slate-100">
+            <h1 className="py-4 text-xl text-left px-2 md:py-8 md:text-center md:items-center md:text-5xl font-bold dark:text-slate-100">
               🤑 Hourly
             </h1>
             <div className="flex h-full mx-auto overflow-y-auto px-6">
