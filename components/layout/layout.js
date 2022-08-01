@@ -2,6 +2,35 @@ import Header from "../header/header";
 import Footer from "../footer/footer";
 
 export default function Layout({ children }) {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const salary_currency = e.target.elements.salary_currency.value;
+    const salary_amount = e.target.elements.salary_amount.value;
+    const salary_duration = e.target.elements.salary_duration.value;
+    const radio_enjoyment_index = null;
+    e.target.elements.radio_enjoyment.forEach(function (value, index) {
+      if (value.checked === true) {
+        radio_enjoyment_index = index;
+        return;
+      }
+    });
+    const task_duration = e.target.elements.task_duration.value;
+    const task_currency = e.target.elements.task_currency.value;
+    const task_amount = e.target.elements.task_amount.value;
+    const task_payment_duration = e.target.elements.task_payment_duration.value;
+    const result = [
+      salary_currency,
+      salary_amount,
+      salary_duration,
+      radio_enjoyment_index,
+      task_duration,
+      task_currency,
+      task_amount,
+      task_payment_duration,
+    ];
+    console.log(result.join("::"));
+  };
+
   return (
     <div>
       <Header />
@@ -15,7 +44,7 @@ export default function Layout({ children }) {
               🤑 Hourly
             </h1>
             <div className="flex h-full mx-auto overflow-y-auto px-6">
-              <form>
+              <form onSubmit={onSubmit}>
                 <div className="py-0">
                   <div className="mt-8 max-w-md">
                     <div className="grid grid-cols-1 gap-6">

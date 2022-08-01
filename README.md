@@ -4,7 +4,9 @@ Know your hourly rate!
 
 ## Next up
 
-- [ ] Connect Form submission (incl the 404 console errors)
+- [ ] Build out calculator logic (send to results page)
+- [x] Form submission
+- [x] 404 console errors
 - [x] Client side form validation
 - [x] Split up the input box into sub-components
 - [x] Add Button
