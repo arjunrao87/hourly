@@ -4,7 +4,8 @@ Know your hourly rate!
 
 ## Next up
 
-- [ ] Build out calculator logic (send to results page)
+- [ ] Build out calculator logic
+- [x] Update results page
 - [x] Form submission
 - [x] 404 console errors
 - [x] Client side form validation
