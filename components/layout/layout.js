@@ -1,8 +1,13 @@
 import Header from "../header/header";
 import Footer from "../footer/footer";
 import { useState } from "react";
+import { useRouter } from "next/router";
+
+import Link from "next/link";
 
 export default function Layout({ children }) {
+  const router = useRouter();
+
   const [results_page, setResultsPage] = useState(false);
   const [salary_currency, setSalaryCurrency] = useState("USD ($)");
   const [salary_amount, setSalaryAmount] = useState(0);
@@ -23,7 +28,6 @@ export default function Layout({ children }) {
     setTaskCurrency(e.target.elements.task_currency.value);
     setTaskAmount(e.target.elements.task_amount.value);
     setPaymentDuration(e.target.elements.task_payment_duration.value);
-    const radio_enjoyment_index = null;
     e.target.elements.radio_enjoyment.forEach(function (value, index) {
       if (value.checked === true) {
         setRadioEnjoymentIndex(index);
@@ -42,7 +46,9 @@ export default function Layout({ children }) {
           </div>
           <div className="mx-auto flex flex-col h-full w-full bg-gray-200 dark:bg-slate-700">
             <h1 className="py-4 text-xl text-left px-2 md:py-8 md:text-center md:items-center md:text-5xl font-bold dark:text-slate-100">
-              🤑 Hourly
+              <Link href="/">
+                <a>🤑 Hourly</a>
+              </Link>
             </h1>
             {results_page === false && (
               <div className="flex h-full mx-auto overflow-y-auto px-6">
@@ -251,6 +257,7 @@ export default function Layout({ children }) {
                   <div className="py-6 items-center">
                     <button
                       type="submit"
+                      onClick={() => router.replace("/results")}
                       className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
                       Submit
