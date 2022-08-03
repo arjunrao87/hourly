@@ -1,3 +1,5 @@
+import TaskDetails from "../components/task/task";
+
 export default function Home() {
-  return <></>;
+  return <TaskDetails />;
 }
