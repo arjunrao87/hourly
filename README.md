@@ -5,6 +5,7 @@ Know your hourly rate!
 ## Next up
 
 - [ ] Fix how "/results" routing works
+- [ ] Modular layouts/index/results pages
 - [x] Add routing to results page
 - [x] Update results page
 - [x] Form submission
