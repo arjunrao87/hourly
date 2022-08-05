@@ -1,10 +1,5 @@
-import { useRouter } from "next/router";
+import Calculator from "../components/calculator/calculator";
 
 export default function Results() {
-  const router = useRouter();
-  return (
-    <div>
-      <div className="text-xl">{JSON.stringify(router.query)}</div>
-    </div>
-  );
+  return <Calculator />;
 }
