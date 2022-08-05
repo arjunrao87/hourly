@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 export default function TaskDetails() {
   const router = useRouter();
 
-  // const [results_page, setResultsPage] = useState(false);
   const [salary_currency, setSalaryCurrency] = useState("USD ($)");
   const [salary_amount, setSalaryAmount] = useState(0);
   const [salary_duration, setSalaryDuration] = useState(0);
@@ -20,7 +19,7 @@ export default function TaskDetails() {
     e.preventDefault();
     e.target.elements.radio_enjoyment.forEach(function (value, index) {
       if (value.checked === true) {
-        setRadioEnjoymentIndex(index);
+        radio_enjoyment_index = index;
         return;
       }
     });
@@ -123,8 +122,8 @@ export default function TaskDetails() {
                   <input
                     id="default-radio-1"
                     type="radio"
-                    value=""
                     name="radio_enjoyment"
+                    onChange={handleParam(setRadioEnjoymentIndex)}
                     className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
                   <label
@@ -138,8 +137,8 @@ export default function TaskDetails() {
                     defaultChecked
                     id="default-radio-2"
                     type="radio"
-                    value=""
                     name="radio_enjoyment"
+                    onChange={handleParam(setRadioEnjoymentIndex)}
                     className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
                   <label
@@ -152,8 +151,8 @@ export default function TaskDetails() {
                   <input
                     id="default-radio-3"
                     type="radio"
-                    value=""
                     name="radio_enjoyment"
+                    onChange={handleParam(setRadioEnjoymentIndex)}
                     className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
                   <label

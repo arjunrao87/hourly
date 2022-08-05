@@ -21,9 +21,9 @@ export default function Layout({ children }) {
           </div>
           <RightSidebar />
         </div>
-        <div className="flex items-center justify-center">
-          <Footer />
-        </div>
+      </div>
+      <div className="flex items-center justify-center">
+        <Footer />
       </div>
     </div>
   );
