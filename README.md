@@ -5,6 +5,7 @@ Know your hourly rate!
 ## Next up
 
 - [ ] Build results page
+- [x] Dont pass query params in url to /results
 - [x] Fix how "/results" routing works
 - [x] Modular layouts/index/results pages
 - [x] Add routing to results page

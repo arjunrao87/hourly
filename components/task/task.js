@@ -23,19 +23,22 @@ export default function TaskDetails() {
         return;
       }
     });
-    router.push({
-      pathname: "/results",
-      query: {
-        salary_currency: salary_currency,
-        salary_amount: salary_amount,
-        salary_duration: salary_duration,
-        radio_enjoyment_index: radio_enjoyment_index,
-        task_duration: task_duration,
-        task_currency: task_currency,
-        task_amount: task_amount,
-        task_payment_duration: task_payment_duration,
+    router.push(
+      {
+        pathname: "/results",
+        query: {
+          salary_currency: salary_currency,
+          salary_amount: salary_amount,
+          salary_duration: salary_duration,
+          radio_enjoyment_index: radio_enjoyment_index,
+          task_duration: task_duration,
+          task_currency: task_currency,
+          task_amount: task_amount,
+          task_payment_duration: task_payment_duration,
+        },
       },
-    });
+      "/results"
+    );
   };
 
   return (
