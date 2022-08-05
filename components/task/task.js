@@ -5,12 +5,12 @@ export default function TaskDetails() {
   const router = useRouter();
 
   const [salary_currency, setSalaryCurrency] = useState("USD ($)");
-  const [salary_amount, setSalaryAmount] = useState(0);
+  const [salary_amount, setSalaryAmount] = useState();
   const [salary_duration, setSalaryDuration] = useState(0);
   const [radio_enjoyment_index, setRadioEnjoymentIndex] = useState(0);
-  const [task_duration, setTaskDuration] = useState(0);
+  const [task_duration, setTaskDuration] = useState();
   const [task_currency, setTaskCurrency] = useState("USD ($)");
-  const [task_amount, setTaskAmount] = useState(0);
+  const [task_amount, setTaskAmount] = useState();
   const [task_payment_duration, setTaskPaymentDuration] = useState("Hourly");
 
   const handleParam = (setValue) => (e) => setValue(e.target.value);
@@ -87,6 +87,7 @@ export default function TaskDetails() {
                                   rounded-md
                                   border-gray-300
                                   shadow-sm
+                                  slashed-zero
                                   focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                       placeholder="Enter amount..."
                     />
