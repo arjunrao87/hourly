@@ -4,7 +4,8 @@ Know your hourly rate!
 
 ## Next up
 
-- [ ] Build results page
+- [ ] Add tests
+- [x] Do calculator math
 - [x] Dont pass query params in url to /results
 - [x] Fix how "/results" routing works
 - [x] Modular layouts/index/results pages
