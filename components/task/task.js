@@ -6,7 +6,7 @@ export default function TaskDetails() {
 
   const [salary_currency, setSalaryCurrency] = useState("USD ($)");
   const [salary_amount, setSalaryAmount] = useState();
-  const [salary_duration, setSalaryDuration] = useState(0);
+  const [salary_duration, setSalaryDuration] = useState("Hourly");
   const [radio_enjoyment_index, setRadioEnjoymentIndex] = useState(0);
   const [task_duration, setTaskDuration] = useState();
   const [task_currency, setTaskCurrency] = useState("USD ($)");
@@ -70,11 +70,10 @@ export default function TaskDetails() {
                               "
                   >
                     <option>USD ($)</option>
-                    <option>GBP (￡)</option>
-                    <option>EUR (€)</option>
-                    <option>RUB (₽)</option>
-                    <option>INR (₹)</option>
-                    <option>Other</option>
+                    <option disabled>GBP (￡)</option>
+                    <option disabled>EUR (€)</option>
+                    <option disabled>RUB (₽)</option>
+                    <option disabled>INR (₹)</option>
                   </select>
                   <div className="flex flex-col">
                     <input
@@ -214,11 +213,10 @@ export default function TaskDetails() {
                               "
                   >
                     <option>USD ($)</option>
-                    <option>GBP (￡)</option>
-                    <option>EUR (€)</option>
-                    <option>RUB (₽)</option>
-                    <option>INR (₹)</option>
-                    <option>Other</option>
+                    <option disabled>GBP (￡)</option>
+                    <option disabled>EUR (€)</option>
+                    <option disabled>RUB (₽)</option>
+                    <option disabled>INR (₹)</option>
                   </select>
                   <input
                     type="number"
