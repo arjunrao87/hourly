@@ -4,7 +4,8 @@ Know your hourly rate!
 
 ## Next up
 
-- [ ] Add tests
+- [ ] Refine DIY method (add tolerances + add logic)
+- [x] Add tests
 - [x] Do calculator math
 - [x] Dont pass query params in url to /results
 - [x] Fix how "/results" routing works
