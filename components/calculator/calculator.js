@@ -6,7 +6,7 @@ const WEEKS_IN_BIWEEKLY = 2;
 const WEEKS_IN_MONTH = 4;
 const MONTHS_IN_YEAR = 12;
 
-function calculate(
+export function calculate(
   salary_currency,
   salary_amount,
   salary_duration,
@@ -35,7 +35,7 @@ function calculate(
       (HOURS_IN_DAY * DAYS_IN_WEEK * WEEKS_IN_MONTH * MONTHS_IN_YEAR);
   }
   let what_it_would_take_you = Number(salary_hourly_rate * task_duration);
-  what_it_would_take_you = what_it_would_take_you.toFixed(2);
+  what_it_would_take_you = Number(what_it_would_take_you.toFixed(2));
 
   let what_it_would_take_them = 0;
   if (task_payment_duration == "Hourly") {
@@ -43,7 +43,7 @@ function calculate(
   } else if (task_payment_duration == "Lump sum") {
     what_it_would_take_them = task_amount;
   }
-  what_it_would_take_them = Number(what_it_would_take_them).toFixed(2);
+  what_it_would_take_them = Number(Number(what_it_would_take_them).toFixed(2));
   return [what_it_would_take_you, what_it_would_take_them];
 }
 
