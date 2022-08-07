@@ -5,6 +5,7 @@ Know your hourly rate!
 ## Next up
 
 - [ ] Refine DIY method (add tolerances + add logic)
+- [x] Add goatcounter
 - [x] Add tests
 - [x] Do calculator math
 - [x] Dont pass query params in url to /results
