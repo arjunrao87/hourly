@@ -78,7 +78,7 @@ export function diyOrNot(
     " " +
     what_it_would_take_them;
 
-  return diy, message;
+  return [diy, message];
 }
 
 export default function Calculator() {
@@ -92,8 +92,8 @@ export default function Calculator() {
   const task_amount = router.query.task_amount;
   const task_payment_duration = router.query.task_payment_duration;
 
-  let diy,
-    message = diyOrNot(
+  let [diy,
+    message] = diyOrNot(
       salary_currency,
       salary_amount,
       salary_duration,

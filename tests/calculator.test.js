@@ -1,6 +1,6 @@
 import { calculate, diyOrNot } from "../components/calculator/calculator";
 
-describe("Verify Calculator", () => {
+describe("Verify Calculations", () => {
   it("USD -> Hourly, USD -> Hourly", () => {
     const salary_currency = "USD ($)";
     const salary_amount = 100;
@@ -162,4 +162,35 @@ describe("Verify Calculator", () => {
     expect(returned_you).toEqual(what_it_would_take_you);
     expect(returned_them).toEqual(what_it_would_take_them);
   });
+});
+
+describe("DIY or NOT", () => {
+    it("USD -> Hourly, USD -> Hourly", () => {
+        const salary_currency = "USD ($)";
+        const salary_amount = 100;
+        const salary_duration = "Hourly";
+        const radio_enjoyment_index = 0;
+        const task_duration = 1;
+        const task_currency = "USD ($)";
+        const task_amount = 10;
+        const task_payment_duration = "Hourly";
+    
+        const what_it_would_take_you = 100.00;
+        const what_it_would_take_them = 10.00;
+        const diy = false;
+        const message = "You = " + salary_currency + " " + what_it_would_take_you + ", Them = " + task_currency + " " + what_it_would_take_them;
+    
+        let [returned_diy, returned_message] = diyOrNot(
+          salary_currency,
+          salary_amount,
+          salary_duration,
+          radio_enjoyment_index,
+          task_duration,
+          task_currency,
+          task_amount,
+          task_payment_duration
+        );
+        // expect(returned_diy).toEqual(diy);
+        expect(returned_message).toEqual(message);
+    });
 });
