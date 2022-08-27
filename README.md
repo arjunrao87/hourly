@@ -4,7 +4,8 @@ Know your hourly rate!
 
 ## Next up
 
-- [ ] Refine DIY method (add tolerances + add logic)
+- [ ] Display results in a better way
+- [x] Refine DIY method (add tolerances + add logic)
 - [x] Add goatcounter
 - [x] Add tests
 - [x] Do calculator math
