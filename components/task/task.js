@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function TaskDetails() {
   const router = useRouter();
@@ -7,7 +8,7 @@ export default function TaskDetails() {
   const [salary_currency, setSalaryCurrency] = useState("USD ($)");
   const [salary_amount, setSalaryAmount] = useState();
   const [salary_duration, setSalaryDuration] = useState("Hourly");
-  const [radio_enjoyment_index, setRadioEnjoymentIndex] = useState(0);
+  const [level_of_difficulty, setLevelOfDifficulty] = useState(0);
   const [task_duration, setTaskDuration] = useState();
   const [task_currency, setTaskCurrency] = useState("USD ($)");
   const [task_amount, setTaskAmount] = useState();
@@ -17,9 +18,9 @@ export default function TaskDetails() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    e.target.elements.radio_enjoyment.forEach(function (value, index) {
+    e.target.elements.level_of_difficulty.forEach(function (value, index) {
       if (value.checked === true) {
-        radio_enjoyment_index = index;
+        level_of_difficulty = index;
         return;
       }
     });
@@ -30,7 +31,7 @@ export default function TaskDetails() {
           salary_currency: salary_currency,
           salary_amount: salary_amount,
           salary_duration: salary_duration,
-          radio_enjoyment_index: radio_enjoyment_index,
+          level_of_difficulty: level_of_difficulty,
           task_duration: task_duration,
           task_currency: task_currency,
           task_amount: task_amount,
@@ -47,8 +48,17 @@ export default function TaskDetails() {
         <div className="py-0">
           <div className="mt-8 max-w-md">
             <div className="grid grid-cols-1 gap-6">
+              <span className="text-gray-700  dark:text-slate-100">
+                Hourly helps you decide whether you should undertake a task on
+                your own or outsource it to someone else.{" "}
+                <Link href="https://onestepforward.beehiiv.com/p/ultimate-net-worth-guide">
+                  <a target="_blank" class="underline">
+                    More details
+                  </a>
+                </Link>
+              </span>
               <div className="text-lg md:text-xl font-bold dark:text-slate-100">
-                About You
+                Let's go
               </div>
               <label className="block">
                 <span className="text-gray-700  dark:text-slate-100">
@@ -119,14 +129,15 @@ export default function TaskDetails() {
               </label>
               <label className="block">
                 <span className="text-gray-700  dark:text-slate-100">
-                  Do you like doing this type of task?
+                  What is the level of difficulty of the task?
                 </span>
                 <span className="flex flex-row gap-x-2">
                   <input
                     id="default-radio-1"
                     type="radio"
-                    name="radio_enjoyment"
-                    onChange={handleParam(setRadioEnjoymentIndex)}
+                    required
+                    name="level_of_difficulty"
+                    onChange={handleParam(setLevelOfDifficulty)}
                     className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
                   <label
@@ -134,14 +145,13 @@ export default function TaskDetails() {
                     className="mt-1 ml-2 text-sm font-medium text-gray-700  dark:text-slate-100"
                   >
                     {" "}
-                    Yes
+                    Easy
                   </label>
                   <input
-                    defaultChecked
                     id="default-radio-2"
                     type="radio"
-                    name="radio_enjoyment"
-                    onChange={handleParam(setRadioEnjoymentIndex)}
+                    name="level_of_difficulty"
+                    onChange={handleParam(setLevelOfDifficulty)}
                     className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
                   <label
@@ -149,30 +159,14 @@ export default function TaskDetails() {
                     className="mt-1 ml-2 text-sm font-medium text-gray-700  dark:text-slate-100"
                   >
                     {" "}
-                    No
-                  </label>
-                  <input
-                    id="default-radio-3"
-                    type="radio"
-                    name="radio_enjoyment"
-                    onChange={handleParam(setRadioEnjoymentIndex)}
-                    className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="default-radio-3"
-                    className="mt-1 ml-2 text-sm font-medium text-gray-700  dark:text-slate-100"
-                  >
-                    {" "}
-                    Sometimes
+                    Hard
                   </label>
                 </span>
               </label>
-              <h3 className="text-lg md:text-xl font-bold  dark:text-slate-100">
-                Outsourcing your task
-              </h3>
               <label className="block">
                 <span className="text-gray-700 dark:text-slate-100">
-                  How long would the task take to complete? (in hours)
+                  How long would it take <b>you</b> to complete the task? (in
+                  hours)
                 </span>
                 <input
                   type="number"
@@ -195,7 +189,7 @@ export default function TaskDetails() {
               </label>
               <label className="block">
                 <span className="text-gray-700 dark:text-slate-100">
-                  How much would you pay for the task to be done?
+                  If you had to pay for the task, how much would it cost?
                 </span>
                 <span className="flex flex-row gap-x-2">
                   <select
@@ -251,7 +245,7 @@ export default function TaskDetails() {
                               "
                   >
                     <option>Hourly</option>
-                    <option>Lump sum</option>
+                    <option>Total</option>
                   </select>
                 </span>
               </label>
