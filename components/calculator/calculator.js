@@ -84,23 +84,20 @@ export default function Calculator() {
 
   return (
     <div className="flex h-full mx-auto overflow-x-auto ">
-      <div class="container mx-auto ">
-        <div className="flex justify-center text-5xl  dark:text-slate-100">
+      <div className="container mx-auto max-w-md">
+        <div className="flex pt-6 justify-center text-3xl md:text-4xl   dark:text-slate-100">
           {diy ? "✅ Just do it yourself!" : "❌ Don't do it yourself!"}
         </div>
-        <div className="pt-8 flex text-3xl justify-center	 dark:text-slate-100">
-          Here's why
-        </div>
-        <div className="pt-4 flex text-2xl justify-center text-red-600 dark:text-amber-400">
+        <div className="pt-6 px-6 flex text-justify text-2xl md:text-2xl justify-center text-red-600 dark:text-amber-400">
           It will cost ${what_it_would_take_you} for your time and the
           professional will charge ${what_it_would_take_them}.{" "}
         </div>
-        <div className="pt-2 flex text-2xl justify-center dark:text-slate-100">
+        <div className="pt-2 px-6 text-justify flex text-2xl md:text-2xl justify-center dark:text-slate-100">
           {level_of_difficulty == 0
             ? "Since the task is easy and the disparity between your rate and the professional rate isn't high, we suggest you do it yourself!"
             : "Since the task is hard, the efficiency of a professional is worth the price. In fact, we think unless they charge more than 10x what your time is worth, don't do it yourself."}{" "}
         </div>
-        <div className="pt-8 flex text-2xl justify-center dark:text-slate-100">
+        <div className="pt-8 flex text-2xl md:text-2xl justify-center dark:text-slate-100">
           <Link
             href={
               level_of_difficulty == 0
@@ -109,9 +106,19 @@ export default function Calculator() {
             }
           >
             <a target="_blank" class="underline">
-              Link for more details
+              More details
             </a>
           </Link>
+        </div>
+        <div className="py-6 items-center px-8">
+          <form action="/" method="post">
+            <button
+              type="submit"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              🔁 Try again
+            </button>
+          </form>
         </div>
       </div>
     </div>

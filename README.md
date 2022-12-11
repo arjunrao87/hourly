@@ -4,10 +4,13 @@ Know your hourly rate!
 
 ## Next up
 
+- [ ] Launch
 - [ ] Display ads in sidebar (if needed)
 - [ ] Deploy site to Netlify
 - [ ] Fix "More details" links with an actual blog post
-- [ ] Adjust results page for mobile view
+- [ ] Share on Social
+- [x] Try again links on the results page
+- [x] Adjust results page for mobile view
 - [x] Display results in a better way
 - [x] Intro about hourly
 - [x] Refine DIY method (add tolerances + add logic)

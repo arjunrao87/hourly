@@ -48,18 +48,16 @@ export default function TaskDetails() {
         <div className="py-0">
           <div className="mt-8 max-w-md">
             <div className="grid grid-cols-1 gap-6">
-              <span className="text-gray-700  dark:text-slate-100">
+              <span className="text-justify text-gray-700  dark:text-slate-100">
                 Hourly helps you decide whether you should undertake a task on
-                your own or outsource it to someone else.{" "}
+                your own or outsource it to someone else. <br />
                 <Link href="https://onestepforward.beehiiv.com/p/ultimate-net-worth-guide">
                   <a target="_blank" class="underline">
                     More details
                   </a>
                 </Link>
               </span>
-              <div className="text-lg md:text-xl font-bold dark:text-slate-100">
-                Let's go
-              </div>
+              <hr className="h-px bg-gray-400 border-0 dark:bg-gray-700" />
               <label className="block">
                 <span className="text-gray-700  dark:text-slate-100">
                   How much do you make?
