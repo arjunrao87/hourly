@@ -4,11 +4,11 @@ Know your hourly rate!
 
 ## Next up
 
-- [ ] Launch
 - [ ] Display ads in sidebar (if needed)
-- [ ] Deploy site to Netlify
-- [ ] Fix "More details" links with an actual blog post
-- [ ] Share on Social
+- [ ] Launch (https://usehourly.netlify.app/)
+- [x] Fix "More details" links with an actual blog post
+- [x] Share on Social
+- [x] Deploy site to Netlify
 - [x] Try again links on the results page
 - [x] Adjust results page for mobile view
 - [x] Display results in a better way

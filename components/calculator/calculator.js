@@ -1,5 +1,15 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  RedditShareButton,
+  RedditIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+} from "next-share";
 
 const HOURS_IN_DAY = 24;
 const DAYS_IN_WEEK = 5;
@@ -97,12 +107,12 @@ export default function Calculator() {
             ? "Since the task is easy and the disparity between your rate and the professional rate isn't high, we suggest you do it yourself!"
             : "Since the task is hard, the efficiency of a professional is worth the price. In fact, we think unless they charge more than 10x what your time is worth, don't do it yourself."}{" "}
         </div>
-        <div className="pt-8 flex text-2xl md:text-2xl justify-center dark:text-slate-100">
+        <div className="pt-2 flex text-2xl md:text-2xl justify-center dark:text-slate-100">
           <Link
             href={
               level_of_difficulty == 0
-                ? "https://onestepforward.beehiiv.com/p/ultimate-net-worth-guide"
-                : "https://onestepforward.beehiiv.com/p/ultimate-net-worth-guide#Why%20is%20knowing%20your%20Net%20Worth%20important?:~:text=com/photos/BQHczaWvDYQ-,Wanna%20know%20more%3F,-I%20hope%20to"
+                ? "https://medium.com/@arjunrao87/introducing-hourly-59d5649a1cef"
+                : "https://medium.com/@arjunrao87/introducing-hourly-59d5649a1cef#:~:text=Why%2010x%3F%20This,the%20job%20yourself."
             }
           >
             <a target="_blank" class="underline">
@@ -119,6 +129,23 @@ export default function Calculator() {
               🔁 Try again
             </button>
           </form>
+        </div>
+        <div className="flex pt-6 justify-center text-xl md:text-xl   dark:text-slate-100">
+          Share Hourly with your friends!
+        </div>
+        <div className="flex justify-center py-6 px-8 space-x-4">
+          <FacebookShareButton url={"https://usehourly.netlify.app/"}>
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
+          <WhatsappShareButton url={"https://usehourly.netlify.app/"}>
+            <WhatsappIcon size={32} round />
+          </WhatsappShareButton>
+          <LinkedinShareButton url={"https://usehourly.netlify.app/"}>
+            <LinkedinIcon size={32} round />
+          </LinkedinShareButton>
+          <RedditShareButton url={"https://usehourly.netlify.app/"}>
+            <RedditIcon size={32} round />
+          </RedditShareButton>
         </div>
       </div>
     </div>

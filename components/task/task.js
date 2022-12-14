@@ -51,7 +51,7 @@ export default function TaskDetails() {
               <span className="text-justify text-gray-700  dark:text-slate-100">
                 Hourly helps you decide whether you should undertake a task on
                 your own or outsource it to someone else. <br />
-                <Link href="https://onestepforward.beehiiv.com/p/ultimate-net-worth-guide">
+                <Link href="https://medium.com/@arjunrao87/introducing-hourly-59d5649a1cef">
                   <a target="_blank" class="underline">
                     More details
                   </a>
