@@ -60,10 +60,10 @@ export default function TaskDetails() {
               <hr className="h-px bg-gray-400 border-0 dark:bg-gray-700" />
               <label className="block">
                 <span className="text-gray-700  dark:text-slate-100">
-                  How much do you make?
+                  How much do you make? (in USD)
                 </span>
                 <span className="flex flex-row gap-x-2">
-                  <select
+                  {/* <select
                     name="salary_currency"
                     value={salary_currency}
                     onChange={handleParam(setSalaryCurrency)}
@@ -82,16 +82,15 @@ export default function TaskDetails() {
                     <option disabled>EUR (€)</option>
                     <option disabled>RUB (₽)</option>
                     <option disabled>INR (₹)</option>
-                  </select>
-                  <div className="flex flex-col">
-                    <input
-                      type="number"
-                      required
-                      name="salary_amount"
-                      value={salary_amount}
-                      onChange={handleParam(setSalaryAmount)}
-                      min="0"
-                      className="mt-1
+                  </select> */}
+                  <input
+                    type="number"
+                    required
+                    name="salary_amount"
+                    value={salary_amount}
+                    onChange={handleParam(setSalaryAmount)}
+                    min="0"
+                    className="mt-1
                                   block
                                   w-full
                                   rounded-md
@@ -99,9 +98,8 @@ export default function TaskDetails() {
                                   shadow-sm
                                   slashed-zero
                                   focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                      placeholder="Enter amount..."
-                    />
-                  </div>
+                    placeholder="Enter amount..."
+                  />
                   <select
                     name="salary_duration"
                     value={salary_duration}
@@ -187,10 +185,11 @@ export default function TaskDetails() {
               </label>
               <label className="block">
                 <span className="text-gray-700 dark:text-slate-100">
-                  If you had to pay for the task, how much would it cost?
+                  If you had to pay for the task, how much would it cost? (in
+                  USD)
                 </span>
                 <span className="flex flex-row gap-x-2">
-                  <select
+                  {/* <select
                     name="task_currency"
                     value={task_currency}
                     onChange={handleParam(setTaskCurrency)}
@@ -209,7 +208,7 @@ export default function TaskDetails() {
                     <option disabled>EUR (€)</option>
                     <option disabled>RUB (₽)</option>
                     <option disabled>INR (₹)</option>
-                  </select>
+                  </select> */}
                   <input
                     type="number"
                     name="task_amount"

@@ -6,9 +6,9 @@ Know your hourly rate!
 
 - [ ] Display ads in sidebar (if needed)
 - [ ] Launch (https://usehourly.netlify.app/)
-- [ ] Remove other currencies
-- [ ] Fix the calculator bug
-- [ ] Make the $ sign smaller and the input box bigger in mobile view
+- [x] Remove other currencies
+- [x] Fix the calculator bug
+- [x] Make the $ sign smaller and the input box bigger in mobile view
 - [ ] Fix goatcounter
 - [x] Fix "More details" links with an actual blog post
 - [x] Share on Social

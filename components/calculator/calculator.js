@@ -16,6 +16,14 @@ const DAYS_IN_WEEK = 5;
 const WEEKS_IN_BIWEEKLY = 2;
 const WEEKS_IN_MONTH = 4;
 const MONTHS_IN_YEAR = 12;
+const DO_IT_YOURSELF = [
+  "✅ Just do it yourself!",
+  "Since the task is easy and the disparity between your rate and the professional rate isn't high, we suggest you do it yourself!",
+];
+const DONT_DO_IT_YOURSELF = [
+  "❌ Don't do it yourself!",
+  "Since the task is hard, the efficiency of a professional is worth the price. In fact, we think unless they charge more than 10x what your time is worth, don't do it yourself.",
+];
 
 export function calculate(
   salary_currency,
@@ -96,16 +104,14 @@ export default function Calculator() {
     <div className="flex h-full mx-auto overflow-x-auto ">
       <div className="container mx-auto max-w-md">
         <div className="flex pt-6 justify-center text-3xl md:text-4xl   dark:text-slate-100">
-          {diy ? "✅ Just do it yourself!" : "❌ Don't do it yourself!"}
+          {diy ? DO_IT_YOURSELF[0] : DONT_DO_IT_YOURSELF[0]}
         </div>
         <div className="pt-6 px-6 flex text-justify text-2xl md:text-2xl justify-center text-red-600 dark:text-amber-400">
           It will cost ${what_it_would_take_you} for your time and the
           professional will charge ${what_it_would_take_them}.{" "}
         </div>
         <div className="pt-2 px-6 text-justify flex text-2xl md:text-2xl justify-center dark:text-slate-100">
-          {level_of_difficulty == 0
-            ? "Since the task is easy and the disparity between your rate and the professional rate isn't high, we suggest you do it yourself!"
-            : "Since the task is hard, the efficiency of a professional is worth the price. In fact, we think unless they charge more than 10x what your time is worth, don't do it yourself."}{" "}
+          {diy ? DO_IT_YOURSELF[1] : DONT_DO_IT_YOURSELF[1]}
         </div>
         <div className="pt-2 flex text-2xl md:text-2xl justify-center dark:text-slate-100">
           <Link
