@@ -50,10 +50,10 @@ export default function TaskDetails() {
             <div className="grid grid-cols-1 gap-6">
               <span className="text-justify text-gray-700  dark:text-slate-100">
                 Hourly helps you decide whether you should undertake a task on
-                your own or outsource it to someone else. <br />
+                your own or outsource it to someone else.{" "}
                 <Link href="https://medium.com/@arjunrao87/introducing-hourly-59d5649a1cef">
                   <a target="_blank" class="underline">
-                    More details
+                    Read more.
                   </a>
                 </Link>
               </span>
