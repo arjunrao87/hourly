@@ -9,7 +9,7 @@ Know your hourly rate!
 - [x] Remove other currencies
 - [x] Fix the calculator bug
 - [x] Make the $ sign smaller and the input box bigger in mobile view
-- [ ] Fix goatcounter
+- [x] Fix goatcounter
 - [x] Fix "More details" links with an actual blog post
 - [x] Share on Social
 - [x] Deploy site to Netlify
